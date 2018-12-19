@@ -22,7 +22,6 @@ class SongList extends React.Component {
     }
     render() {
         console.log(this.props);
-        
         return (
             <div>{this.renderList()}</div>
         );
@@ -34,6 +33,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(
-    mapStateToProps, {
-    selectSong
-})(SongList);
+    mapStateToProps, 
+    {selectSong}
+)(SongList);
