@@ -5,10 +5,13 @@ import {
     DELETE_STREAM,
     EDIT_STREAM
 } from "../actions/types";
-import _ from "loadsh";
+import _ from "lodash";
 
-export default (state = {}, action) => {
+export default (state = {}, action) => {    
     switch (action.type) {
+    case FETCH_STREAMS:
+        // _.mapKeys makes objects has key of the value of the second argument (i.e. "id" in this case)
+        return {...state, ..._.mapKeys(action.payload, "id")};
     case FETCH_STREAM:
         // Regular
         const newState = {...state};

@@ -25,13 +25,13 @@ class StreamCreate extends React.Component {
         // console.log({...input});
         // console.log(input);
         return (
-            // <input 
-            //     onChange={formProps.input.onChange}  
-            //     value={formProps.input.value} 
-            // />
-            // ...is equal to
-            // <input {...formProps.input} />
-            // even simpler version...
+        // <input 
+        //     onChange={formProps.input.onChange}  
+        //     value={formProps.input.value} 
+        // />
+        // ...is equal to
+        // <input {...formProps.input} />
+        // even simpler version...
 
             <div className={className}>
                 <label>{label}</label>
