@@ -13,14 +13,14 @@ class StreamCreate extends React.Component {
         // Has many more props due to Redux-Form
         // console.log(this.props);
         return (
-           <div>
-               <h3>Create a Stream</h3>
-               <StreamForm onSubmit={this.onSubmit} />
-           </div>
+            <div>
+                <h3>Create a Stream</h3>
+                <StreamForm onSubmit={this.onSubmit} />
+            </div>
         );
     }
 };
 export default connect(
     null,
     {createStream}
-)(StreamForm);
+)(StreamCreate);

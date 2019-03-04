@@ -61,12 +61,13 @@ export const fetchStream = (id) => {
 
 export const editStream = (id, formValues) => {
     return async (dispatch) => {
-        const response = await streams.put(`/streams/${id}`, formValues);
+        const response = await streams.patch(`/streams/${id}`, formValues);
 
         dispatch({
             type: EDIT_STREAM,
             payload: response.data
         });
+        history.push("/");
     };
 };
 
@@ -78,5 +79,6 @@ export const deleteStream = (id) => {
             type: DELETE_STREAM,
             payload: id
         });
+        history.push("/");
     };
 };
