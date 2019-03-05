@@ -27,7 +27,7 @@ export const createStream = (formValues) => {
     return async (dispatch, getState) => {
         const {userId} = getState().auth;
         const response = await streams.post("/streams", {...formValues, userId});
-        console.log(response);
+
         dispatch({
             type: CREATE_STREAM,
             payload: response.data
@@ -51,7 +51,7 @@ export const fetchStreams = () => {
 export const fetchStream = (id) => {
     return async (dispatch) => {
         const response = await streams.get(`/streams/${id}`);
-
+        
         dispatch({
             type: FETCH_STREAM,
             payload: response.data
